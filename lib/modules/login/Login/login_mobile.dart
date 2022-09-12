@@ -13,12 +13,11 @@ class LoginPageMobilePortrait extends GetView<LoginLogic> {
   Widget build(BuildContext context) {
     Get.find<LoginLogic>();
     return Scaffold(
+      backgroundColor: Color(0xff32302C),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/images/LoginIcon.png",
-              height: MediaQuery.of(context).size.height*.10, alignment: Alignment.center),
+          Image.asset("assets/images/LoginIcon.png",alignment: Alignment.topCenter,height: MediaQuery.of(context).size.height*.10),
         ],
       ),
     );

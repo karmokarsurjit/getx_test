@@ -8,7 +8,7 @@ import 'package:getx_test/modules/register/register_view.dart';
 import 'package:getx_test/routes/app_pages.dart';
 
 class AppRoutes{
-  static final INITIAL =AppPages.LOGIN;
+  static final INITIAL =AppPages.REGISTER;
   static final routes = [
     GetPage(
         name: AppPages.LOGIN,
