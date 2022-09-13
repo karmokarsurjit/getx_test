@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Getx Demo',
+      title: 'Flutter Getx Assignment',
       enableLog: true,
       initialRoute: AppRoutes.INITIAL,
       getPages: AppRoutes.routes,
