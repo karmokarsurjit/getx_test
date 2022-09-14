@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Getx Assignment',
       enableLog: true,
+      debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.INITIAL,
       getPages: AppRoutes.routes,
       theme: ThemeData(

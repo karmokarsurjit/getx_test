@@ -114,7 +114,7 @@ class LoginPageMobilePortrait extends StatelessWidget {
                     color: Colors.white,
                   ),
                   ),
-                  const SizedBox(width: 50,),
+                  const SizedBox(width: 40,),
                   Obx(() =>
                       Checkbox(
 
