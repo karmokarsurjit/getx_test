@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:getx_test/shared/constants/colors.dart';
 
 class ThemeConfig {
@@ -19,7 +20,7 @@ class ThemeConfig {
         ? Typography.blackMountainView : Typography.whiteMountainView;
     return ThemeData(
       brightness: brightness,
-      buttonColor: buttonBackground,
+      buttonTheme: ButtonThemeData(buttonColor: buttonBackground),
       canvasColor: background,
       dividerColor: divider,
 
@@ -34,8 +35,26 @@ class ThemeConfig {
 
       textSelectionTheme: TextSelectionThemeData(
         selectionColor: accentColor,
-
+        selectionHandleColor: accentColor,
+        cursorColor: accentColor,
       ),
+      toggleableActiveColor: accentColor,
+      appBarTheme: AppBarTheme(
+        systemOverlayStyle: SystemUiOverlayStyle(statusBarBrightness: brightness) ,
+        color: cardBackground,
+         titleTextStyle: baseTextTheme.bodyText1?.copyWith(
+           color: secondaryText,
+           fontSize: 18,
+         ),
+        iconTheme: IconThemeData(
+          color: secondaryText,
+        ),
+      ),
+      iconTheme: IconThemeData(
+        color: secondaryText,
+        size: 16.0,
+      ),
+      errorColor: error,
     );
   }
 
@@ -43,11 +62,26 @@ class ThemeConfig {
       brightness: Brightness.light,
       background: ConstantColors.DASHBACKGROUNDCOLOR,
       cardBackground: ConstantColors.WHITE,
-      primaryText: ConstantColors.TEXTWHITE,
-      secondaryText: ConstantColors.TEXTBLACK,
-      accentColor: accentColor,
-      buttonText: buttonText,
-      error: error
+      primaryText: ConstantColors.TEXTBLACK,
+      secondaryText: ConstantColors.TEXTGREY,
+      accentColor: ConstantColors.YELLOW,
+      divider: ConstantColors.GREY,
+      buttonText: ConstantColors.TEXTBLACK,
+      disabled: ConstantColors.GREY,
+      error: ConstantColors.RED,
+  );
+
+  static ThemeData get darkTheme => createTheme(
+    brightness: Brightness.dark,
+    background: ConstantColors.LOGINBACKGROUNDCOLOR,
+    cardBackground: ConstantColors.BLACK,
+    primaryText: ConstantColors.TEXTWHITE,
+    secondaryText: ConstantColors.TEXTBLACK,
+    accentColor: ConstantColors.YELLOW,
+    divider: ConstantColors.GREY,
+    buttonText: ConstantColors.TEXTBLACK,
+    disabled: ConstantColors.GREY,
+    error: ConstantColors.RED,
   );
 
 }

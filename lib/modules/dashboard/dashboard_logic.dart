@@ -2,6 +2,11 @@ import 'package:get/get.dart';
 
 class DashboardLogic extends GetxController {
   @override
+  void onInit() {
+    // TODO: implement onInit
+  }
+
+  @override
   void onReady() {
     // TODO: implement onReady
     super.onReady();

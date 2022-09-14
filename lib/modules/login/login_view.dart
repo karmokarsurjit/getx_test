@@ -10,7 +10,6 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final logic = Get.find<LoginLogic>();
     return ResponsiveBuilder(
         builder: (context, sizingInformation) {
           return ScreenTypeLayout(

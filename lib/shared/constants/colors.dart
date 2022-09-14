@@ -7,6 +7,7 @@ class ConstantColors{
   static const Color YELLOW = Color(0xFFF2C94C);
   static const Color GREEN = Color(0xFF018337);
   static const Color GREY = Color(0xFF828282);
+  static const Color RED = Color(0xFFFD3131);
 
   static const Color DASHBACKGROUNDCOLOR = Color(0xFFFFFFFF);
   static const Color LOGINBACKGROUNDCOLOR =Color(0xFF32302C);

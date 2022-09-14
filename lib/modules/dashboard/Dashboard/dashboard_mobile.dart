@@ -7,6 +7,7 @@ class DashboardPageMobilePortrait extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Get.find<DashboardLogic>();
     return Container();
   }
 }
