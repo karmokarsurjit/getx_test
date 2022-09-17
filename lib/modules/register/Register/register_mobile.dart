@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:getx_test/modules/register/register_logic.dart';
+import 'package:getx_test/routes/app_pages.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../login/login_view.dart';
-
-class RegisterPageMobilePortrait extends StatelessWidget {
+class RegisterPageMobilePortrait extends GetView<RegisterLogic> {
   final SizingInformation? sizingInformation;
   const RegisterPageMobilePortrait({Key? key, this.sizingInformation}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    //Get.find<RegisterLogic>();
+    Get.find<RegisterLogic>();
     return Scaffold(
       backgroundColor: const Color(0xff32302C),
         body: ListView(
@@ -147,7 +148,8 @@ class RegisterPageMobilePortrait extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
+                    Get.offAllNamed(AppPages.DASHBOARD);
+                    //Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
                   },
                   child:
                   Text('Register',
@@ -156,34 +158,36 @@ class RegisterPageMobilePortrait extends StatelessWidget {
               ),
             ),
             Row(children: [
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text("Already have an account?",
-                  textAlign:  TextAlign.center,
+              SizedBox(width: 120),
+              Text("Already have an account?",
                   style:
                   TextStyle(
                     fontSize: 15,
                     color: Colors.black,
                   ),
                 ),
-              ),
+
               TextButton(
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
+                  Get.toNamed(AppPages.LOGIN);
+                  //Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
                 },
-                child: const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text("Login Now",
-                    textAlign:  TextAlign.center,
+                child:
+                Text("Login Now",
                     style:
                     TextStyle(
                       fontSize: 15,
                       color: Color(0xffF2C94C),
                     ),
                   ),
-                ),
               ),
             ],
+            ),
+            SizedBox(height: 55),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: SvgPicture.asset('assets/images/i_button.svg', height: MediaQuery.of(context).size.height * .03,
+                  alignment: Alignment.bottomRight),
             ),
           ],
         ),
@@ -191,12 +195,13 @@ class RegisterPageMobilePortrait extends StatelessWidget {
   }
 }
 
-class RegisterPageMobileLandscape extends StatelessWidget {
+class RegisterPageMobileLandscape extends GetView<RegisterLogic> {
   final SizingInformation? sizingInformation;
   const RegisterPageMobileLandscape({Key? key, this.sizingInformation}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Get.find<RegisterLogic>();
     return Container();
   }
 }
